@@ -1,50 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/30 11:50:25 by Lulu              #+#    #+#             */
-/*   Updated: 2017/08/30 11:57:22 by Lulu             ###   ########.fr       */
+/*   Created: 2017/08/30 12:10:35 by Lulu              #+#    #+#             */
+/*   Updated: 2017/08/30 12:25:09 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-int     ft_strlen(char *str)
+int     ft_atoi(char *str)
 {
     int     i;
+    int     nb;
+    int     signe;
 
+    nb = 0;
+    signe = 1;
     i = 0;
-    while (str[i])
+    while ((str[i] > 8 && str[i] < 14) ||(str[i] == ' '))
         i++;
-    return (i);
-}
-
-char    *ft_strdup(char *src)
-{
-    char    *dest;
-    int     i;
-
-    i = 0;
-    if (!(dest = (char *)malloc(sizeof(char) * ft_strlen(src) + 1)))
-        return (NULL);
-    while (src[i])
-    {
-        dest[i] = src[i];
+    if (str[i] == '-')
+        signe = -1;
+    if (str[i] == '+' || str[i] == '-')
         i++;
-    }
-    dest[i] = '\0';
-    return (dest);
+    while (str[i] >= 48 && str[i] <= 57)
+        nb = nb * 10 + str[i] - '0';
+    return (nb * signe);
 }
 
 int     main(int ac, char **av)
 {
     if (ac != 2)
         return (0);
-    printf("%s", ft_strdup(av[1]));
+    printf("%d", ft_atoi(av[1]));
     return (0);
 }

@@ -1,50 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/30 11:50:25 by Lulu              #+#    #+#             */
-/*   Updated: 2017/08/30 11:57:22 by Lulu             ###   ########.fr       */
+/*   Created: 2017/09/04 13:29:29 by Lulu              #+#    #+#             */
+/*   Updated: 2017/09/04 14:03:54 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 
-int     ft_strlen(char *str)
+char *ft_strstr(char *haystack, char *needle)
 {
     int     i;
+    int     j;
+    int     a;
 
+    a = 0;
     i = 0;
-    while (str[i])
-        i++;
-    return (i);
-}
-
-char    *ft_strdup(char *src)
-{
-    char    *dest;
-    int     i;
-
-    i = 0;
-    if (!(dest = (char *)malloc(sizeof(char) * ft_strlen(src) + 1)))
-        return (NULL);
-    while (src[i])
+    if (needle[i] == '\0')
+        return (haystack);
+    while (haystack[i] != '\0')
     {
-        dest[i] = src[i];
+        j = 0;
+        a = i;
+        while (haystack[i] == needle[j])
+        {
+            i++;
+            j++;
+            if (needle[j] == '\0')
+                return (haystack + a);
+        }
+        a = 0;
         i++;
     }
-    dest[i] = '\0';
-    return (dest);
+    return (NULL);
 }
 
 int     main(int ac, char **av)
 {
-    if (ac != 2)
+    if (ac != 3)
         return (0);
-    printf("%s", ft_strdup(av[1]));
+    
+    printf("%s\n", ft_strstr(av[1], av[2]));
+    printf("%s", strstr(av[1], av[2]));
     return (0);
 }
