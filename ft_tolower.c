@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/30 12:04:03 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/06 14:33:31 by Lulu             ###   ########.fr       */
+/*   Created: 2017/09/06 14:09:43 by Lulu              #+#    #+#             */
+/*   Updated: 2017/09/06 14:19:13 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <ctype.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 
-int     ft_isascii(int c)
+int     ft_tolower(int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
+    if (c >= 'A' && c <= 'Z')
+        return (c + 40);
     else
-        return (0);
+        return (c);
+}
+
+int     main(int ac, char **av)
+{
+    if (ac == 2)
+        printf("%d", ft_tolower(atoi(av[1])));
 }

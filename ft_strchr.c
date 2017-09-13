@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/30 12:04:03 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/06 14:33:31 by Lulu             ###   ########.fr       */
+/*   Created: 2017/09/04 14:18:16 by Lulu              #+#    #+#             */
+/*   Updated: 2017/09/06 14:40:05 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
-int     ft_isascii(int c)
+char *strchr(char *s, int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    else
-        return (0);
+    int     i;
+
+    i = 0;
+    while (s[i])
+    {
+        if (s[i] == c)
+            return (s[i]);
+        i++;
+    }
+    return (NULL);
 }

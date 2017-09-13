@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/30 12:04:03 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/06 14:33:31 by Lulu             ###   ########.fr       */
+/*   Created: 2017/09/06 14:27:17 by Lulu              #+#    #+#             */
+/*   Updated: 2017/09/06 14:28:16 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <unistd.h>
 #include <stdlib.h>
 
-int     ft_isascii(int c)
+int     ft_isprint(int c)
 {
-    if (c >= 0 && c <= 127)
+    if (c >= 32 && c <= 126)
         return (1);
     else
         return (0);

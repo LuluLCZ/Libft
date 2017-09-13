@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/30 12:04:03 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/06 14:33:31 by Lulu             ###   ########.fr       */
+/*   Created: 2017/09/06 14:29:53 by Lulu              #+#    #+#             */
+/*   Updated: 2017/09/06 14:31:40 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-int     ft_isascii(int c)
+int     ft_isalnum(int c)
 {
-    if (c >= 0 && c <= 127)
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
         return (1);
     else
         return (0);
