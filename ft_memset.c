@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/13 09:25:01 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/13 09:38:40 by Lulu             ###   ########.fr       */
+/*   Created: 2017/09/13 09:14:34 by Lulu              #+#    #+#             */
+/*   Updated: 2017/09/13 09:23:32 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
-#include <unistd.h>
 
-char    *ft_strcat(char *base, char *toadd)
+void    *ft_memset(void *b, int c, size_t len)
 {
-    int     i;
-    int     j;
+    char    *str;
+    size_t  i;
 
+    str = c;
     i = 0;
-    j = 0;
-    while (base[i])
-        i++;
-    while (toadd[j] != '\0')
+    while (i < n)
     {
-        base[i] = toadd[j];
+        ptr[i] = c;
         i++;
-        j++;
     }
-    base[i] = '\0';
-    return (base);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 3)
-        return (0);
-    printf("%s", ft_strcat(av[1], av[2]));
-    return (0);
+    return (b);
 }
