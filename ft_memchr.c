@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 13:41:14 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/18 12:06:35 by Lulu             ###   ########.fr       */
+/*   Created: 2017/09/18 12:18:39 by Lulu              #+#    #+#             */
+/*   Updated: 2017/09/18 12:22:33 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdio.h>
 
-size_t  ft_strlcat(char *dst, const char *src, size_t size)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
-    
+    size_t  i;
+    int     j;
+    const char    *str;
+
+    str = s;
+    i = 0;
+    j = 0;
+    while (i < n)
+    {
+        if (str[j] = c)
+            return (str[j]);
+        j++;
+        i++;
+    }
+    return (NULL);
 }
