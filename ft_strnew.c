@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 12:29:47 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/19 22:50:21 by Lulu             ###   ########.fr       */
+/*   Created: 2017/09/19 22:54:31 by Lulu              #+#    #+#             */
+/*   Updated: 2017/09/19 23:05:49 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+
+char    *ft_strnew(size_t size)
 {
-    size_t  n;
-    size_t  i;
     char    *str;
+    int     i;
 
-    str = dst;
     i = 0;
-    n = 0;
-
-    while (str[i])
-        i++;
-    
-    while (n < len)
+    str = (char *)malloc(sizeof(size));
+    while (str[i] == '\0')
     {
-        str[i] = src[n];
+        str[i] = '\0';
         i++;
-        n++;
     }
-    return (dst);
+    return (str);
+}
+
+int     main(int ac, char **av)
+{
+    if (ac != 2)
+        return (0);
+    (void)av;
+    printf("%s", ft_strnew(atoi(av[1])));
+    return (0);
 }
