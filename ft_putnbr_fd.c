@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 18:40:46 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/19 19:01:50 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/09/20 09:13:03 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ void    ft_putnbr_fd(int n, int fd)
         }
         else if (n > 9)
             ft_putnbr_fd(n / 10);
-        ft_putchar_fd((nb % 10) + '0', fd);
+        ft_putchar_fd((n % 10) + '0', fd);
     }
 }
