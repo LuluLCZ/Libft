@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 12:18:39 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/18 12:22:33 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/05 13:23:40 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,26 @@
 
 void    *ft_memchr(const void *s, int c, size_t n)
 {
-    size_t  i;
-    int     j;
-    const char    *str;
+    size_t          i;
+    unsigned char   C;
+    const char      *S;
 
-    str = s;
+    S = s;
     i = 0;
-    j = 0;
+    C = c;
     while (i < n)
     {
-        if (str[j] = c)
-            return (str[j]);
-        j++;
+        if (S[i] = C)
+            return ((void *)s + i);
         i++;
     }
     return (NULL);
+}
+
+int     main(int ac, char **av)
+{
+    if (ac != 4)
+        return (0);
+    printf("%s", ft_memchr(av[1], av[2][1], atoi(av[3])));
+    printf("%s", memchr(av[1], av[2][1], atoi(av[3])));
 }

@@ -1,40 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 12:23:04 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/05 13:25:25 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/05 13:27:10 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/05 13:31:27 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-int     ft_memcmp(const void *s1, const void *s2, size_t n)
+void    *ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-    size_t  i;
-    const char  *S1;
-    const char  *S2;
-    
+    char        *DST;
+    const char  *SRC;
+    char        C;
+    int         i;
+
     i = 0;
-    S1 = s1;
-    S2 = s2;
+    C = c;
+    DST = dst;
+    SRC = src;
     while (i < n)
     {
-        if (S1[i] != S2[i])
-            return (S1[i] - S2[i])
+        if (SRC[i] == C)
+            return (dst + i + 1);
+        DST[i] = SRC[i];
         i++;
     }
-    return (0);
+    return (NULL);
 }
 
 int     main(int ac, char **av)
 {
-    if (ac != 4)
+    if (ac != 5)
         return (0);
-    printf("%d", ft_memcmp(av[1], av[2], atoi(av[3])));
-    printf("%d", memcmp(av[1], av[2], atoi(av[3])));
+    printf("%s", ft_memccpy(av[1], av[2], av[3][1], atoi(av[4])));
+    printf("%s", memccpy(av[1], av[2], av[3][1], atoi(av[4])));
     return (0);
 }

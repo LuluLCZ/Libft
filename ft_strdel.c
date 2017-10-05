@@ -1,40 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/04 14:18:16 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/05 13:34:48 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/05 13:35:11 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/05 13:36:35 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
-char *strchr(char *s, int c)
+void    ft_strdel(char **as)
 {
-    int     i;
-    char    C;
-
-    C = c;
-    i = 0;
-    while (s[i] != C)
-        i++;
-    if (s[i] == '\0')
-        return (NULL);
-    if (s[i] == C)
-        return ((char *)s + i);
-    return (NULL);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 3)
-        return (0);
-    printf("%s", ft_strchr(av[1], av[2][1]));
-    printf("%s", strchr(av[1], av[2][1]));
-    return (0);
+    free(*as);
+    *as = NULL;
 }

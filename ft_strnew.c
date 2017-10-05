@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 22:54:31 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/19 23:05:49 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/05 13:37:33 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ char    *ft_strnew(size_t size)
     int     i;
 
     i = 0;
-    str = (char *)malloc(sizeof(size));
-    while (str[i] == '\0')
+    if (!(str = (char *)malloc(sizeof(size))))
+        return (NULL);
+    while (i < size)
     {
         str[i] = '\0';
         i++;
