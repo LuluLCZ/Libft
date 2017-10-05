@@ -1,58 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/05 00:19:14 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/05 22:05:21 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/06 00:30:45 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/06 00:35:21 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int     ft_strlen(char const *s)
+char    *ft_strsub(char const *s, unsigned int start, size_t len)
 {
-    int     i;
+    char        *S;
+    size_t      i;
 
     i = 0;
-    while (s[i])
-        i++;
-    return (i);
-}
-
-char    *ft_strjoin(char const *s1, char const *s2)
-{
-    char            *str;
-    int             i;
-    int             j;
-
-    i = 0;
-    j = 0;
-    if (!(str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+    if (!(S = (char *)malloc(sizeof(len) + 1)))
         return (NULL);
-    while (s1[i])
+    while (i < len)
     {
-        str[i] = s1[i];
+        S[i] = s[start];
         i++;
+        start++;
     }
-    while (s2[j])
-    {
-        str[i] = s2[j];
-        i++;
-        j++;
-    }
-    return (str);
+    return (S);
 }
 
 int     main(int ac, char **av)
 {
-    if (ac != 3)
+    if (ac != 4)
         return (0);
-    printf("%s", ft_strjoin(av[1], av[2]));
+    printf("%s", ft_strsub(av[1], atoi(av[2]), atoi(av[3])));
     return (0);
 }

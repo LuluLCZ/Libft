@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/05 00:19:14 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/05 22:05:21 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/05 22:06:58 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/05 22:39:11 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
+#include <stdio.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int     ft_strlen(char const *s)
 {
@@ -25,34 +25,40 @@ int     ft_strlen(char const *s)
     return (i);
 }
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char    *ft_strtrim(char const *s)
 {
-    char            *str;
-    int             i;
-    int             j;
+    char    *S;
+    int     i;
+    int     a;
+    int     j;
 
-    i = 0;
     j = 0;
-    if (!(str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+    a = 0;
+    i = 0;
+    if (!(S = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
         return (NULL);
-    while (s1[i])
-    {
-        str[i] = s1[i];
+    while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
         i++;
-    }
-    while (s2[j])
-    {
-        str[i] = s2[j];
+    a = i;
+    while (s[i])
         i++;
+    while (s[i - 1] == ' ' || s[i - 1] == '\t' || s[i - 1] == '\n' || s[i - 1] == '\0')
+        i--;
+    while (a < i)
+    {
+        S[j] = s[a];
         j++;
+        a++;
     }
-    return (str);
+    S[j] = '\0';
+    return (S);
 }
 
 int     main(int ac, char **av)
 {
-    if (ac != 3)
+    (void)av;
+    if (ac != 1)
         return (0);
-    printf("%s", ft_strjoin(av[1], av[2]));
+    printf("%s", ft_strtrim("        \n       \t     bien ou koi         \n      \t  "));
     return (0);
 }

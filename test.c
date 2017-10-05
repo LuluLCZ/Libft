@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/20 08:26:00 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/06 00:53:36 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/06 00:16:34 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/06 00:40:14 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-int     ft_strlen(char const *str)
+int     ft_strlen(const char *s)
 {
     int     i;
-
+    
     i = 0;
-    while (str[i])
+    while (s[i])
         i++;
     return (i);
 }
@@ -42,33 +42,33 @@ char    *ft_strsub(char const *s, unsigned int start, size_t len)
     return (S);
 }
 
-char    **ft_strsplit(char const *s, char c)
+char	**ft_strsplit(const char *s, char c)
 {
-    char        **tab;
-    size_t      i;
-    size_t      j;
-    int         start;
-    int         end;
+	size_t	i;
+	size_t	d;
+	int		start;
+	int		end;
+	char	**tab;
 
-    tab = NULL;
-    j = 0;
-    i = 0;
-    if (s && (tab = (char **)malloc(sizeof(*tab) * ft_strlen(s))))
-    {
-        while (s[i] != '\0')
-        {
-            while (s[i] == c && s[i] != '\0')
-                i++;
-            start = i;
-            while (s[i] != c && s[i] != '\0')
-                i++;
-            end = i;
-            if (end > start)
-                tab[j++] = ft_strsub(s, start, (end - start));
-        }
-        tab[j] = NULL;
-    }
-    return (tab);
+	tab = NULL;
+	i = 0;
+	d = 0;
+	if (s && (tab = (char **)malloc(sizeof(*tab) * (ft_strlen(s)))))
+	{
+		while (s[i] != '\0')
+		{
+			while (s[i] && s[i] == c)
+				i++;
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			end = i;
+			if (end > start)
+				tab[d++] = ft_strsub(s, start, (end - start));
+		}
+		tab[d] = NULL;
+	}
+	return (tab);
 }
 
 int     main(int ac, char **av)
