@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 14:09:43 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/06 14:19:13 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/05 02:25:14 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int     ft_tolower(int c)
 {
     if (c >= 'A' && c <= 'Z')
-        return (c + 40);
+        return (c + 32);
     else
         return (c);
 }
@@ -26,5 +26,6 @@ int     ft_tolower(int c)
 int     main(int ac, char **av)
 {
     if (ac == 2)
-        printf("%d", ft_tolower(atoi(av[1])));
+        printf("%d\n", ft_tolower(*av[1]));
+        //printf("%d", tolower(*av[1]));
 }

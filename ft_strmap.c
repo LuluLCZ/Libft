@@ -1,34 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 13:41:14 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/05 01:34:07 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/05 00:33:38 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/05 00:41:20 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 
-/*size_t  ft_strlcat(char *dst, const char *src, size_t size)
+int     ft_strlen(char const *s)
 {
-    size_t  i;
-    size_t  j;
+    int     i;
 
     i = 0;
-    j = 0;
-    while (dst[i] && i < size)
-        i++;   
-}*/
+    while(s[i])
+        i++;
+    return (i);
+}
+
+char    *ft_strmap(char const *s, char (*f)(char))
+{
+    char    *S;
+    int     i;
+
+    i = 0;
+    if (!(S = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
+        return (NULL);
+    while (s[i])
+    {
+        S[i] = f(s[i]);
+        i++;
+    }
+    S[i] = '\0';
+    return (S);
+}
 
 int     main(int ac, char **av)
 {
-    if (ac != 4)
+    if (ac != 3)
         return (0);
-    printf("%lu", strlcat(av[1], av[2], atoi(av[3])));
+    printf("%s", ft_strmap(av[1], av[2]));
     return (0);
 }

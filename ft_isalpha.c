@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 13:56:14 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/06 14:07:33 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/05 02:12:53 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int     ft_isalpha(int c)
 
 int     main(int ac, char **av)
 {
-    if (ac == 0)
+    if (ac != 2)
         return (0);
-    ft_isalpha(atoi(av[1]));
-    return (0);
+    printf("%d\n", ft_isalpha(av[1][0]));
+    printf("%d", isalpha(*av[1]));
 }
