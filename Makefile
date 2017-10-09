@@ -6,7 +6,7 @@
 #    By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/09 16:14:07 by llacaze           #+#    #+#              #
-#    Updated: 2017/10/09 16:32:35 by llacaze          ###   ########.fr        #
+#    Updated: 2017/10/09 19:45:57 by llacaze          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ NAME : libft.a
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
+
+RM = rm -f
 
 SRC =   ft_atoi.c			\
 		ft_isalnum.c		\
@@ -66,3 +68,21 @@ SRC =   ft_atoi.c			\
 		ft_tolower.c		\
 		ft_toupper.c
 
+OBJ = $(SRC:.c=.o)
+
+$(NAME): includes/libft.h
+	$(CC) $(CFLAGS) -c $(SRC)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+all: $(NAME)
+
+clean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: clean fclean

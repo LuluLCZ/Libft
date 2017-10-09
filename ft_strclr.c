@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 15:58:33 by llacaze           #+#    #+#             */
-/*   Updated: 2017/09/19 16:01:28 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:40:56 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,4 @@ void    ft_strclr(char *s)
         s[i] = '\0';
         i++;
     }
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 2)
-        return (0);
-    ft_strclr(av[1]);
-    printf("%s", av[1]);
-    return (0);
 }

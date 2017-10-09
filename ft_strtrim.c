@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 22:06:58 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 16:32:30 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:43:35 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,4 @@ char    *ft_strtrim(char const *s)
     }
     S[j] = '\0';
     return (S);
-}
-
-int     main(int ac, char **av)
-{
-    (void)av;
-    if (ac != 1)
-        return (0);
-    printf("%s", ft_strtrim("        \n       \t     bien ou koi         \n      \t  "));
-    return (0);
 }

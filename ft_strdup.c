@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 11:50:25 by Lulu              #+#    #+#             */
-/*   Updated: 2017/08/30 11:57:22 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 19:41:09 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,4 @@ char    *ft_strdup(char *src)
     }
     dest[i] = '\0';
     return (dest);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 2)
-        return (0);
-    printf("%s", ft_strdup(av[1]));
-    return (0);
 }

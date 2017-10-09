@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 00:33:38 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/05 00:41:20 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:41:27 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,4 @@ char    *ft_strmap(char const *s, char (*f)(char))
     }
     S[i] = '\0';
     return (S);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 3)
-        return (0);
-    printf("%s", ft_strmap(av[1], av[2]));
-    return (0);
 }

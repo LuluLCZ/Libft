@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 08:26:00 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/06 00:53:36 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:43:20 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,20 +69,4 @@ char    **ft_strsplit(char const *s, char c)
         tab[j] = NULL;
     }
     return (tab);
-}
-
-int     main(int ac, char **av)
-{
-    (void)ac;
-    (void)av;
-    char **ret;
-    int index = 0;
- 
-    ret = ft_strsplit("*ghel*lo*f", '*');
-    while (ret[index])
-    {
-        printf("%s\n", ret[index]);
-        index++;
-    }
-    return (0);
 }

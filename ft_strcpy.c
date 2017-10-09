@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 13:27:15 by llacaze           #+#    #+#             */
-/*   Updated: 2017/08/22 13:33:14 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:41:04 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,4 @@ char    *ft_strcpy(char *dst, char *src)
     }
     dst[i] = '\0';
     return (dst);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 2)
-        return (0);
-    printf("%s", ft_strcpy(av[1]));
-    return (0);
 }

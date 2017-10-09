@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 00:19:14 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/05 22:05:21 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:41:19 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,4 @@ char    *ft_strjoin(char const *s1, char const *s2)
         j++;
     }
     return (str);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 3)
-        return (0);
-    printf("%s", ft_strjoin(av[1], av[2]));
-    return (0);
 }

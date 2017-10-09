@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_test_strsplit.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/06 00:30:45 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 19:43:28 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/09 19:42:23 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/09 19:43:15 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-char    *ft_strsub(char const *s, unsigned int start, size_t len)
+char    **ft_strsplit(char const *s, char c);
+
+int     main(int ac, char **av)
 {
-    char        *S;
-    size_t      i;
-
-    i = 0;
-    if (!(S = (char *)malloc(sizeof(len) + 1)))
-        return (NULL);
-    while (i < len)
+    (void)ac;
+    (void)av;
+    char **ret;
+    int index = 0;
+ 
+    ret = ft_strsplit("*ghel*lo*f", '*');
+    while (ret[index])
     {
-        S[i] = s[start];
-        i++;
-        start++;
+        printf("%s\n", ret[index]);
+        index++;
     }
-    return (S);
+    return (0);
 }

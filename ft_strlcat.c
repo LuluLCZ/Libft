@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 13:41:14 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/09 13:21:05 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 19:41:23 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,4 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
     }
     dst[i] = '\0';
     return (i);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 4)
-        return (0);
-    printf("%lu", ft_strlcat(av[1], av[2], atoi(av[3])));
-    return (0);
 }

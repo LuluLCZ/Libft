@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 12:29:47 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/06 01:08:46 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:44:06 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,4 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     }
     */
     return (dst);
-}
-
-int     main(int ac, char **av)
-{
-    (void)ac;
-    //printf("%s\n", ft_memmove(av[1], av[2], atoi(av[3])));
-    printf("%s", memmove(av[1], av[2], atoi(av[3])));
-    return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 13:57:45 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/04 14:14:23 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 19:41:58 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,4 @@ char    *ft_strnstr(char *haystack, char *needle, size_t len)
         i++;
     }
     return (NULL);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 4)
-        return (0);
-    printf("%s\n", ft_strnstr(av[1], av[2], atoi(av[3])));
-    printf("%s", strnstr(av[1], av[2], atoi(av[3])));
-    return (0);
 }
