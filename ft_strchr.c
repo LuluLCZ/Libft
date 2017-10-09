@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 14:18:16 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/05 13:34:48 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 15:37:08 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-char *strchr(char *s, int c)
+char    *strchr(char *s, int c)
 {
     int     i;
     char    C;

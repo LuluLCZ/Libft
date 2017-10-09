@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 13:29:29 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/04 14:03:54 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 15:44:33 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <unistd.h>
 #include <string.h>
 
-char *ft_strstr(char *haystack, char *needle)
+char    *ft_strstr(char *haystack, char *needle)
 {
     int     i;
     int     j;

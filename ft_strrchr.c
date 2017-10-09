@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 14:47:03 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/06 14:47:05 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 15:44:12 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char    *strrchr(char *s, int c)
+char    *ft_strrchr(char *s, int c)
 {
     int     i;
     int     a;
