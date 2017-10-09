@@ -6,7 +6,7 @@
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 00:54:37 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/06 14:07:35 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 16:56:02 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,12 +94,4 @@ char        *ft_itoa(int n)
     if (n < 0)
         n = -n;
     return (ft_newstringNB(len, n, neg, NB));
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 2)
-        return (0);
-    printf("%s", ft_itoa(atoi(av[1])));
-    return (0);
 }

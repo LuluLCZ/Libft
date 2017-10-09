@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 08:12:21 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/05 13:18:41 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 16:58:48 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,4 @@ void    *ft_memalloc(size_t size)
         i++;
     }
     return (str);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 2)
-        return (0);
-    ft_memalloc(atoi(av[1]));
-    return (0);
 }

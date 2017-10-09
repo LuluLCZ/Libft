@@ -6,7 +6,7 @@
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 09:25:01 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/13 09:38:40 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 17:10:45 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,4 @@ char    *ft_strcat(char *base, char *toadd)
     }
     base[i] = '\0';
     return (base);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 3)
-        return (0);
-    printf("%s", ft_strcat(av[1], av[2]));
-    return (0);
 }

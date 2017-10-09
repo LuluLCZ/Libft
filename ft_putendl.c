@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 16:05:34 by llacaze           #+#    #+#             */
-/*   Updated: 2017/09/19 16:07:36 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 17:07:36 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void    ft_putstr(const char *s)
     }
 }
 
-void    ft_putednl(const char *s)
+void    ft_putendl(const char *s)
 {
     ft_putstr(s);
     ft_putchar('\n');

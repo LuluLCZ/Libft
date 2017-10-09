@@ -6,13 +6,14 @@
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 12:10:35 by Lulu              #+#    #+#             */
-/*   Updated: 2017/08/30 12:25:09 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 16:48:30 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+
 
 int     ft_atoi(char *str)
 {
@@ -32,12 +33,4 @@ int     ft_atoi(char *str)
     while (str[i] >= 48 && str[i] <= 57)
         nb = nb * 10 + str[i] - '0';
     return (nb * signe);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 2)
-        return (0);
-    printf("%d", ft_atoi(av[1]));
-    return (0);
 }
