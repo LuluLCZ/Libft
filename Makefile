@@ -6,7 +6,7 @@
 #    By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/09 16:14:07 by llacaze           #+#    #+#              #
-#    Updated: 2017/10/10 00:37:58 by llacaze          ###   ########.fr        #
+#    Updated: 2017/10/10 18:17:57 by llacaze          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,7 @@ LDLIBS= -lft
 
 HDDIRS=-I includes/
 
-SRC =   main.c				\
-		ft_atoi.c			\
+SRC =   ft_atoi.c			\
 		ft_bzero.c			\
 		ft_isalnum.c		\
 		ft_isalpha.c		\
@@ -79,7 +78,7 @@ SRC =   main.c				\
 		ft_tolower.c		\
 		ft_toupper.c
 
-OBJ = $(SRC:.c=.o)
+OBJ=$(SRC:.c=.o)
 
 $(NAME): libft.h
 	$(CC) $(CFLAGS) -c $(SRC) $(HDDIRS)
@@ -96,4 +95,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean
+.PHONY: all clean fclean re
