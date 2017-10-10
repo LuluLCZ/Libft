@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 19:42:23 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 19:43:15 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 18:47:39 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int     main(int ac, char **av)
     char **ret;
     int index = 0;
  
-    ret = ft_strsplit("*ghel*lo*f", '*');
+    ret = ft_strsplit("      split       this for   me  !       ", ' ');
     while (ret[index])
     {
         printf("%s\n", ret[index]);

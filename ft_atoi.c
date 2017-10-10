@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 12:10:35 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/10 00:12:24 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 18:36:46 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,24 @@ int     ft_atoi(const char *str)
     nb = 0;
     signe = 1;
     i = 0;
-    while ((str[i] > 8 && str[i] < 14) ||(str[i] == ' '))
+    while ((str[i] > 8 && str[i] < 14) || (str[i] == ' '))
         i++;
     if (str[i] == '-')
         signe = -1;
     if (str[i] == '+' || str[i] == '-')
         i++;
-    while (str[i] >= 48 && str[i] <= 57)
-        nb = nb * 10 + str[i] - '0';
+    while (str[i] >= '0' && str[i] <= '9')
+    {
+        nb = (nb * 10) + (str[i] - '0');
+        i++;
+    }
     return (nb * signe);
+}
+
+int     main(int ac, char **av)
+{
+    if (ac != 2)
+        return (0);
+    printf("%d", ft_atoi(av[1]));
+    return (0);
 }

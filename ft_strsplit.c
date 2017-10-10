@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 08:26:00 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/10 01:25:45 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 18:51:53 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char    **ft_strsplit(char const *s, char c)
     tab = NULL;
     j = 0;
     i = 0;
-    if (s && (tab = (char **)malloc(sizeof(*tab) * ft_strlen(s))))
+    if (s && (tab = (char **)malloc(sizeof(char *) * ft_strlen(s))))
     {
         while (s[i] != '\0')
         {

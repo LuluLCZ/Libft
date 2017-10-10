@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 00:19:14 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/10 01:25:01 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 18:43:22 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ char    *ft_strjoin(char const *s1, char const *s2)
         i++;
         j++;
     }
+    str[i] = '\0';
     return (str);
 }
