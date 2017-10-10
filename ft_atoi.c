@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 12:10:35 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/10 18:36:46 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 22:31:01 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,6 @@ int     ft_atoi(const char *str)
         nb = (nb * 10) + (str[i] - '0');
         i++;
     }
+    //Verifier avec un mec qui a validé la lib pour savoir si il faut gere le 9223372036854775807
     return (nb * signe);
-}
-
-int     main(int ac, char **av)
-{
-    if (ac != 2)
-        return (0);
-    printf("%d", ft_atoi(av[1]));
-    return (0);
 }

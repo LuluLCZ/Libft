@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 09:39:19 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/10 00:08:03 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 23:28:32 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,19 @@
 
 char    *ft_strncat(char *base, const char *toadd, size_t n)
 {
-    int     i;
-    int     j;
-    size_t  len;
-    char    *new;
+    size_t      i;
+    size_t      j;
 
     i = 0;
     j = 0;
-    len = 0;
-    if (!(new = (char *)malloc(sizeof(char) * (n + 1))))
-        return (NULL);
-    while (len < n)
+    while (base[i])
+        i++;
+    while (i < n)
     {
-        len++;
-        if (*base)
-            new[i++] = *base++;
-        else
-            new[i++] = *toadd++;
-    }
-    new[i] = '\0';
-    return (new);
+        base[i] = toadd[j];
+        i++;
+        j++;
+    }   
+    base[i] = '\0';
+    return (base);
 }

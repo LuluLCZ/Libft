@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 20:23:37 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 21:59:59 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 23:22:31 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char    *ft_strmapi(char const *s, char(*f)(unsigned int, char))
         S[i] = f(i, s[i]);
         i++;
     }
+    S[i] = '\0';
     return (S);
 }

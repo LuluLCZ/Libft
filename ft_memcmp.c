@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 12:23:04 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/10 02:21:21 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 22:39:29 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int     ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    size_t  i;
+    size_t      i;
     const char  *S1;
     const char  *S2;
     
