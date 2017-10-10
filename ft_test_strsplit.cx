@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_test_strsplit.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/04 14:30:35 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/10 00:50:56 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/09 19:42:23 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/09 19:43:15 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <unistd.h>
-#include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 
-int     ft_toupper(int c)
+char    **ft_strsplit(char const *s, char c);
+
+int     main(int ac, char **av)
 {
-    if (c >= 'a' && c <= 'z')
-        return (c - 32);
-    else
-        return (c);
+    (void)ac;
+    (void)av;
+    char **ret;
+    int index = 0;
+ 
+    ret = ft_strsplit("*ghel*lo*f", '*');
+    while (ret[index])
+    {
+        printf("%s\n", ret[index]);
+        index++;
+    }
+    return (0);
 }

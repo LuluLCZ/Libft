@@ -6,29 +6,13 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 16:07:51 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 19:40:47 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 01:24:14 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
-
-void    ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
-void    ft_putstr(const char *s)
-{
-    int     i;
-
-    i = 0;
-    while (s[i])
-    {
-        ft_putchar(s[i]);
-        i++;
-    }
-}
+#include "libft.h"
 
 void    ft_putnbr(int nb)
 {

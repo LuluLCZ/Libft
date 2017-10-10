@@ -6,25 +6,16 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 11:50:25 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/09 19:41:09 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 01:22:59 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-int     ft_strlen(char *str)
-{
-    int     i;
-
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
-}
-
-char    *ft_strdup(char *src)
+char    *ft_strdup(const char *src)
 {
     char    *dest;
     int     i;

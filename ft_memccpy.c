@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 13:27:10 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 17:01:18 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/10 02:12:18 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 void    *ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-    char        *DST;
-    const char  *SRC;
-    char        C;
-    int         i;
+    unsigned char   *DST;
+    const char      *SRC;
+    char            C;
+    size_t          i;
 
     i = 0;
     C = c;

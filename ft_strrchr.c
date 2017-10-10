@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 14:47:03 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/09 15:44:12 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 20:01:58 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char    *ft_strrchr(char *s, int c)
         i++;
     }
     if (a != 0)
-        return (s[a]);
+        return (&s[a]);
     else
         return (NULL);
 }

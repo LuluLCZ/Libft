@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 21:45:44 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/05 21:46:55 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 20:04:12 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    ft_striteri(char *s, void(*f)(unsigned int, char *))
     i = 0;
     while (s[i])
     {
-        f(i, s[i]);
+        f(i, &s[i]);
         i++;
     }
 }

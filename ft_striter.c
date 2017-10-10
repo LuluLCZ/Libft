@@ -6,18 +6,18 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 09:17:57 by llacaze           #+#    #+#             */
-/*   Updated: 2017/09/20 09:23:48 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 20:03:40 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_striter(char const *s, void (*f)(char *))
+void    ft_striter(char *s, void (*f)(char *))
 {
     int     i;
 
     i = 0;
-    while (s[i])
+    while (s[i] != '\0')
     {
-        f(s[i]);
+        f(&s[i]);
         i++;
     }
 }

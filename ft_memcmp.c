@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 12:23:04 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/09 17:06:56 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/10 02:21:21 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ int     ft_memcmp(const void *s1, const void *s2, size_t n)
     i = 0;
     S1 = s1;
     S2 = s2;
-    while (i < n)
+    if (s1 == NULL && s2 == NULL)
+        return (0);
+    while (i < n && S1[i] == S2[i])
     {
+        if ((i == n )|| (S1[i] == '\0' && S2[i] == '\0'))
+            return (0);
         if (S1[i] != S2[i])
-            return (S1[i] - S2[i])
+            return (S1[i] - S2[i]);
         i++;
     }
     return (0);

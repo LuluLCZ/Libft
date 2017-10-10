@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 13:57:45 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/09 19:41:58 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 00:14:31 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char    *ft_strnstr(char *haystack, char *needle, size_t len)
+char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
     int     i;
     int     j;
@@ -23,7 +23,7 @@ char    *ft_strnstr(char *haystack, char *needle, size_t len)
 
     i = 0;
     if (*needle == '\0')
-        return (haystack);
+        return ((char *)haystack);
     while (haystack[i] && len)
     {
         a = i;
@@ -35,7 +35,7 @@ char    *ft_strnstr(char *haystack, char *needle, size_t len)
             if (len == 0)
                 return (NULL);
             if (needle[j] == '\0')
-                return (haystack + a);
+                return ((char *)haystack + a);
             len--;
         }
         a = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 00:54:37 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 16:56:02 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/10 01:27:10 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-
-int         ft_strlen(char  *s)
-{
-    int     i;
-
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
-}
+#include "libft.h"
 
 static int  ft_lenght(int n)
 {
@@ -56,23 +47,6 @@ static char *ft_newstringNB(int len, int n, int neg, char *NB)
     if (neg < 0)
         NB[0] = '-';
     return (NB);
-}
-
-char        *ft_strdup(char *s)
-{
-    char    *dst;
-    int     i;
-
-    i = 0;
-    if (!(dst = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-        return (NULL);
-    while (s[i])
-    {
-        dst[i] = s[i];
-        i++;
-    }
-    dst[i] = '\0';
-    return (dst);
 }
 
 char        *ft_itoa(int n)

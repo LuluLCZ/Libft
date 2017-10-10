@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 00:33:38 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 19:41:27 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 01:25:12 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
-
-int     ft_strlen(char const *s)
-{
-    int     i;
-
-    i = 0;
-    while(s[i])
-        i++;
-    return (i);
-}
+#include "libft.h"
 
 char    *ft_strmap(char const *s, char (*f)(char))
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 09:25:01 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/09 17:10:45 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/10 00:10:41 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-char    *ft_strcat(char *base, char *toadd)
+char    *ft_strcat(char *base, const char *toadd)
 {
     int     i;
     int     j;

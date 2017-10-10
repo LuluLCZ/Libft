@@ -6,11 +6,11 @@
 #    By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/09 16:14:07 by llacaze           #+#    #+#              #
-#    Updated: 2017/10/09 19:45:57 by llacaze          ###   ########.fr        #
+#    Updated: 2017/10/10 00:37:58 by llacaze          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME : libft.a
+NAME = libft.a
 
 CC = gcc
 
@@ -18,7 +18,15 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
-SRC =   ft_atoi.c			\
+LDFLAGS= -L.
+
+LDLIBS= -lft
+
+HDDIRS=-I includes/
+
+SRC =   main.c				\
+		ft_atoi.c			\
+		ft_bzero.c			\
 		ft_isalnum.c		\
 		ft_isalpha.c		\
 		ft_isascii.c		\
@@ -29,6 +37,8 @@ SRC =   ft_atoi.c			\
 		ft_memccpy.c		\
 		ft_memchr.c			\
 		ft_memcmp.c			\
+		ft_memcpy.c			\
+		ft_memdel.c			\
 		ft_memmove.c		\
 		ft_memset.c			\
 		ft_putchar_fd.c		\
@@ -53,6 +63,7 @@ SRC =   ft_atoi.c			\
 		ft_strlcat.c		\
 		ft_strlen.c			\
 		ft_strmap.c			\
+		ft_strmapi.c		\
 		ft_strncat.c		\
 		ft_strncat.c		\
 		ft_strncmp.c		\
@@ -70,8 +81,8 @@ SRC =   ft_atoi.c			\
 
 OBJ = $(SRC:.c=.o)
 
-$(NAME): includes/libft.h
-	$(CC) $(CFLAGS) -c $(SRC)
+$(NAME): libft.h
+	$(CC) $(CFLAGS) -c $(SRC) $(HDDIRS)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

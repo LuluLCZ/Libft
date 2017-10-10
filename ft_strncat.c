@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 09:39:19 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/09 19:41:37 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 00:08:03 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char    *ft_strncat(char *base, char *toadd, size_t n)
+char    *ft_strncat(char *base, const char *toadd, size_t n)
 {
     int     i;
     int     j;

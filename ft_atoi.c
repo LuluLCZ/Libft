@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 12:10:35 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/09 16:48:30 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/10 00:12:24 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdio.h>
 
 
-int     ft_atoi(char *str)
+int     ft_atoi(const char *str)
 {
     int     i;
     int     nb;

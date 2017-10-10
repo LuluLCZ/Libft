@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 13:33:28 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 19:41:30 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/10 00:08:42 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-size_t  ft_strlen(char *str)
+size_t  ft_strlen(const char *str)
 {
     int     i;
 

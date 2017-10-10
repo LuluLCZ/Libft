@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 13:35:32 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/09 19:41:00 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/09 23:34:18 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int    ft_strcmp(char *s1, char *s2)
+int    ft_strcmp(const char *s1, const char *s2)
 {
     int     i;
 

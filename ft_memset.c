@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 09:14:34 by Lulu              #+#    #+#             */
-/*   Updated: 2017/09/14 11:18:16 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/10/09 19:55:44 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void    *ft_memset(void *b, int c, size_t len)
 
     str = b;
     i = 0;
-    while (i < n)
+    while (i < len)
     {
         str[i] = c;
         i++;
