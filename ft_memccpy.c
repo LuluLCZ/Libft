@@ -6,13 +6,14 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 13:27:10 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/11 00:12:50 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/11 03:14:15 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
 void    *ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
