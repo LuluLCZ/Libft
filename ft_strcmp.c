@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 13:35:32 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/11 00:18:17 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/22 18:11:02 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,9 @@
 int    ft_strcmp(const char *s1, const char *s2)
 {
     int             i;
-    unsigned int    j;
 
     i = 0;
-    j = 0;
     while (s1[i] && s2[i] && s1[i] == s2[i])
         i++;
-    j = s1[i] - s2[i];
-    return (j);
+    return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

@@ -6,7 +6,7 @@
 #    By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/09 16:14:07 by llacaze           #+#    #+#              #
-#    Updated: 2017/10/10 18:29:56 by llacaze          ###   ########.fr        #
+#    Updated: 2017/10/22 14:41:41 by llacaze          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,6 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
-
-LDFLAGS= -L.
-
-LDLIBS= -lft
-
-HDDIRS=-I includes/
 
 SRC =   ft_atoi.c			\
 		ft_bzero.c			\
@@ -81,7 +75,7 @@ SRC =   ft_atoi.c			\
 OBJ=$(SRC:.c=.o)
 
 $(NAME): libft.h
-	$(CC) $(CFLAGS) -c $(SRC) $(HDDIRS)
+	$(CC) $(CFLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

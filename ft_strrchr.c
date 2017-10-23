@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 14:47:03 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/11 03:35:34 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/23 02:56:57 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char    *ft_strrchr(const char *s, int c)
     j = ft_strlen(s);
     a = 0;
     i = 0;
+    if ((char)c == '\0')
+        return ((char *)s + j);
     while (i < j)
     {
         if (s[i] == C)

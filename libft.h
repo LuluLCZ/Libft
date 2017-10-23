@@ -6,13 +6,20 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 20:53:25 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/11 03:31:37 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/16 01:03:00 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+
+typedef struct      s_list
+{
+    void            *content;
+    size_t          content_size;
+    struct s_list   *next;
+}                   t_list;
 
 int         ft_atoi(const char *str);
 void        ft_bzero(void *s, size_t n);

@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 09:39:19 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/10 23:28:32 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/22 20:09:34 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ char    *ft_strncat(char *base, const char *toadd, size_t n)
     j = 0;
     while (base[i])
         i++;
-    while (i < n)
+    while (n > 0 && toadd[j])
     {
         base[i] = toadd[j];
         i++;
         j++;
+        n--;
     }   
     base[i] = '\0';
     return (base);

@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 22:06:58 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/11 00:06:10 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/23 03:30:40 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,12 @@ char    *ft_strtrim(char const *s)
     j = 0;
     a = 0;
     i = 0;
-    
-    while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+    if (!(S = (char *)malloc(sizeof(char) * ((i - a) + 1))))
+        return (NULL);
+    while ((s[i] == ' ' || s[i] == '\t' || s[i] == '\n') && s[i])
         i++;
     if (s[i] == '\0')
-        return (0);
+        return (S);
     a = i;
     while (s[i])
         i++;
