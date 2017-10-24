@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 13:41:14 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/23 19:21:31 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/24 18:39:11 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
     //&&i < size ou  i<=size a test
         i++;
     end_dst = i;
-    while (src[j] && i < size - 1)
+    while (src[j] && i < size - 1)//ici avec i on a deja ft_strlen(dst) et il veut que ca se passe
+                                    //seulement size - 1 - ft_strlen(dst) fois; CHECK man si pas compris
     {
         dst[i] = src[j];
         i++;

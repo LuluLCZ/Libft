@@ -6,7 +6,7 @@
 #    By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/09 16:14:07 by llacaze           #+#    #+#              #
-#    Updated: 2017/10/22 14:41:41 by llacaze          ###   ########.fr        #
+#    Updated: 2017/10/23 23:51:15 by llacaze          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,13 @@ SRC =   ft_atoi.c			\
 		ft_strsub.c			\
 		ft_strtrim.c		\
 		ft_tolower.c		\
-		ft_toupper.c
+		ft_toupper.c		\
+		ft_lstnew.c			\
+		ft_lstdelone.c		\
+		ft_lstdel.c			\
+		ft_lstadd.c			\
+		ft_lstiter.c		\
+		ft_lstmap.c
 
 OBJ=$(SRC:.c=.o)
 

@@ -6,7 +6,30 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 13:31:16 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/23 13:31:17 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/24 02:34:02 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include "libft.h"
+
+t_list  *ft_lstnew(void const *content, size_t content_size)
+{
+    t_list  *element;
+
+    if (!(element = (t_list *)malloc(sizeof(t_list) * (content_size + 1))))
+        return (NULL);
+    if (content == NULL)
+    {
+        element->content = NULL;
+        element->content_size = 0;
+    }
+    else
+    {
+        element->content = malloc(content_size);
+        ft_memcpy(element->content, content, content_size);
+        element->content_size = content_size;
+    }
+    element->next = NULL;
+    return (element);
+}
