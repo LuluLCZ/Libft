@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 13:31:10 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/23 23:47:41 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/25 22:05:11 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 void    ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-    while (lst != NULL)
+    while (lst)
     {
-        f(&(*lst));
+        f(lst);
         lst = lst->next;
     }
 }

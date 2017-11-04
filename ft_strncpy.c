@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 13:54:26 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/22 19:37:22 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/26 14:39:44 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,14 @@ char    *ft_strncpy(char *dst, const char *src, size_t n)
     i = 0;
     if (n == 0)
         return (dst);
+    while (src[i] && i < n)
+    {
+        dst[i] = src[i];
+        i++;
+    }
     while (i < n)
     {
-        if (i > len)
-            dst[i] = '\0';
-        else
-            dst[i] = src[i];
+        dst[i] = '\0';
         i++;
     }
     return (dst);

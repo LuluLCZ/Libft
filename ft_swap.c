@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/23 13:31:13 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/26 15:17:10 by llacaze          ###   ########.fr       */
+/*   Created: 2017/10/25 23:18:23 by llacaze           #+#    #+#             */
+/*   Updated: 2017/10/25 23:20:55 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-t_list  *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+void    ft_swap(void *s1, void *s2)
 {
-    t_list  *New;
+    void    tmp;
 
-    if (!(New = (t_list *)malloc(sizeof(t_list))))
-        return (NULL);
-    if (lst)
-    {
-        New = f(lst);
-        New->next = ft_lstmap(lst->next, f);
-        return (New);
-    }
-    return (NULL);
+    tmp = *s1;
+    *s1 = *s2;
+    *s2 = tmp;
 }

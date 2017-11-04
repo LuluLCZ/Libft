@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 13:31:16 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/24 02:34:02 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/25 19:26:02 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ t_list  *ft_lstnew(void const *content, size_t content_size)
     }
     else
     {
-        element->content = malloc(content_size);
-        ft_memcpy(element->content, content, content_size);
+        element->content = (void *)malloc(sizeof(void) * (content_size + 1));
         element->content_size = content_size;
+        ft_memcpy(element->content, content, content_size);
     }
     element->next = NULL;
     return (element);

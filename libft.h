@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 20:53:25 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/16 01:03:00 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/10/26 15:06:51 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char        *ft_strcat(char *base, const char *toadd);
 char        *ft_strchr(const char *s, int c);
 void        ft_strclr(char *s);
 int         ft_strcmp(const char *s1, const char *s2);
-char        ft_strcpy(char *dst, const char *src);
+char        *ft_strcpy(char *dst, const char *src);
 void        ft_strdel(char **as);
 char        *ft_strdup(const char *src);
 int         ft_strequ(const char *s1, const char *s2);
@@ -73,5 +73,12 @@ char        *ft_strsub(char const *s, unsigned int start, size_t len);
 char        *ft_strtrim(char const *s);
 int         ft_tolower(int c);
 int         ft_toupper(int c);
+void        ft_swap(void *s1, void *s2);
+void        ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void        ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+t_list      *ft_lstnew(void const *content, size_t content_size);
+void        ft_lstadd(t_list **alst, t_list *new);
+void        ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list      *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
