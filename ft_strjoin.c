@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 00:19:14 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/10 18:43:22 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/04 21:54:07 by Lulu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,23 @@ char    *ft_strjoin(char const *s1, char const *s2)
 
     i = 0;
     j = 0;
-    if (!(str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
-        return (NULL);
-    while (s1[i])
+    if (s1 && s2)
     {
-        str[i] = s1[i];
-        i++;
+        if (!(str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+            return (NULL);
+        while (s1[i])
+        {
+            str[i] = s1[i];
+            i++;
+        }
+        while (s2[j])
+        {
+            str[i] = s2[j];
+            i++;
+            j++;
+        }
+        str[i] = '\0';
+        return (str);
     }
-    while (s2[j])
-    {
-        str[i] = s2[j];
-        i++;
-        j++;
-    }
-    str[i] = '\0';
-    return (str);
+    return (NULL);
 }
