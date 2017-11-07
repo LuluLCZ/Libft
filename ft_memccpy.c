@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 13:27:10 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/22 19:25:58 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 12:16:46 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,23 @@
 #include <string.h>
 #include "libft.h"
 
-void    *ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-    unsigned char   *DST;
-    char            *SRC;
-    char            C;
-    size_t          i;
+	unsigned char	*dst2;
+	char			*src2;
+	char			c2;
+	size_t			i;
 
-    i = 0;
-    C = c;
-    DST = (void *)dst;
-    SRC = (void *)src;
-    while (i < n)
-    {
-        DST[i] = SRC[i];
-        if (SRC[i] == C)
-            return (dst + i + 1);
-        i++;
-    }
-    return (NULL);
+	i = 0;
+	c2 = c;
+	dst2 = (void *)dst;
+	src2 = (void *)src;
+	while (i < n)
+	{
+		dst2[i] = src2[i];
+		if (src2[i] == c2)
+			return (dst + i + 1);
+		i++;
+	}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 15:58:33 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/04 21:42:37 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/11/07 11:51:30 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-void    ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
-    int     i;
+	int		i;
 
-    if (s)
-    {
-        i = 0;
-        while (s[i])
-        {
-            s[i] = '\0';
-            i++;
-        }
-    }
+	if (s)
+	{
+		i = 0;
+		while (s[i])
+		{
+			s[i] = '\0';
+			i++;
+		}
+	}
 }

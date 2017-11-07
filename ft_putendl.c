@@ -6,15 +6,15 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 16:05:34 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/10 01:23:59 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 12:22:36 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void    ft_putendl(const char *s)
+void	ft_putendl(const char *s)
 {
-    ft_putstr(s);
-    ft_putchar('\n');
+	ft_putstr(s);
+	ft_putchar('\n');
 }

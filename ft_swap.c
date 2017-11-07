@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 23:18:23 by llacaze           #+#    #+#             */
-/*   Updated: 2017/10/25 23:20:55 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 12:36:02 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 void    ft_swap(void *s1, void *s2)
 {
-    void    tmp;
+	void    tmp;
 
-    tmp = *s1;
-    *s1 = *s2;
-    *s2 = tmp;
+	tmp = *s1;
+	*s1 = *s2;
+	*s2 = tmp;
 }

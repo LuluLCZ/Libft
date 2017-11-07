@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 09:25:01 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/10 22:56:33 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 11:39:20 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 #include <stdio.h>
 #include <unistd.h>
 
-char    *ft_strcat(char *base, const char *toadd)
+char	*ft_strcat(char *base, const char *toadd)
 {
-    int     i;
-    int     j;
+	int		i;
+	int		j;
 
-    i = 0;
-    j = 0;
-    while (base[i])
-        i++;
-    while (toadd[j] != '\0')
-    {
-        base[i] = toadd[j];
-        i++;
-        j++;
-    }
-    base[i] = '\0';
-    return (base);
+	i = 0;
+	j = 0;
+	while (base[i])
+		i++;
+	while (toadd[j] != '\0')
+	{
+		base[i] = toadd[j];
+		i++;
+		j++;
+	}
+	base[i] = '\0';
+	return (base);
 }

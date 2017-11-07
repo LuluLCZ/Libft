@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 13:29:29 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/23 03:23:36 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 12:33:39 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,27 @@
 #include <string.h>
 #include "libft.h"
 
-char    *ft_strstr(const char *haystack, const char *needle)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-    int     i;
-    size_t     j;
-    int     a;
+	int		i;
+	size_t	j;
+	int		a;
 
-    i = 0;
-    if (needle[i] == '\0')
-        return ((void *)haystack);
-    while (haystack[i] != '\0')
-    {
-        j = 0;
-        a = i;
-        while (haystack[i + j] == needle[j])
-        {
-            j++;
-            if (needle[j] == '\0')
-                return ((void *)haystack + a);
-        }
-        a = 0;
-        i++;
-    }
-    return (NULL);
+	i = 0;
+	if (needle[i] == '\0')
+		return ((void *)haystack);
+	while (haystack[i] != '\0')
+	{
+		j = 0;
+		a = i;
+		while (haystack[i + j] == needle[j])
+		{
+			j++;
+			if (needle[j] == '\0')
+				return ((void *)haystack + a);
+		}
+		a = 0;
+		i++;
+	}
+	return (NULL);
 }

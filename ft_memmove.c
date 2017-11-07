@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 12:29:47 by Lulu              #+#    #+#             */
-/*   Updated: 2017/10/23 20:14:44 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 12:21:23 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,29 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char   *DST;
-    unsigned char   *SRC;
-    size_t          i;
+	unsigned char	*dst2;
+	unsigned char	*src2;
+	size_t			i;
 
-    i = 0;
-    DST = (unsigned char *)dst;
-    SRC = (unsigned char *)src;
-    if (DST > SRC)
-    {
-        while (len--)
-        {
-            *(DST+len) = *(SRC+len);
-        }
-    }
-    else
-    {
-        while (i < len)
-        {
-            *(DST+i) = *(SRC+i);
-            i++;
-        }
-    }
-    return (dst);
+	i = 0;
+	dst2 = (unsigned char *)dst;
+	src2 = (unsigned char *)src;
+	if (dst2 > src2)
+	{
+		while (len--)
+		{
+			*(dst2+len) = *(src2+len);
+		}
+	}
+	else
+	{
+		while (i < len)
+		{
+			*(dst2+i) = *(src2+i);
+			i++;
+		}
+	}
+	return (dst);
 }

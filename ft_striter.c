@@ -6,22 +6,21 @@
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 09:17:57 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/04 21:46:16 by Lulu             ###   ########.fr       */
+/*   Updated: 2017/11/07 12:26:53 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
-    int     i;
+	int		i;
 
-    i = 0;
-    if (s && f)
-    {
-        while (s[i] != '\0')
-        {
-            f(&s[i]);
-            i++;
-        }
-
-    }
+	i = 0;
+	if (s && f)
+	{
+		while (s[i] != '\0')
+		{
+			f(&s[i]);
+			i++;
+		}
+	}
 }
