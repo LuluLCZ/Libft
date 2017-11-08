@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 20:53:25 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/07 12:57:35 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:47:47 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ void				ft_strdel(char **as);
 char				*ft_strdup(const char *src);
 int					ft_strequ(const char *s1, const char *s2);
 void				ft_striter(char *s, void (*f)(char *));
-void				ft_striteri(char *s, void(*f)(unsigned int, char *));
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *str);
 char				*ft_strmap(char const *s, char (*f)(char));
-char				*ft_strmapi(char const *s, char(*f)(unsigned int, char));
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strncat(char *base, const char *toadd, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, int n);
 char				*ft_strncpy(char *dst, const char *src, size_t n);
@@ -73,7 +73,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
-void				ft_swap(void *s1, void *s2);
+void				ft_swap(int *a, int *b);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list				*ft_lstnew(void const *content, size_t content_size);

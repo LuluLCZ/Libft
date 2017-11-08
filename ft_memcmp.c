@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 12:23:04 by Lulu              #+#    #+#             */
-/*   Updated: 2017/11/07 12:18:33 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 15:37:10 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (s12[i] != s22[i])
-			return (s12[i] - s21[i]);
+			return (s12[i] - s22[i]);
 		i++;
 	}
 	return (0);

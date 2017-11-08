@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 12:29:47 by Lulu              #+#    #+#             */
-/*   Updated: 2017/11/07 12:21:23 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:11:45 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len--)
 		{
-			*(dst2+len) = *(src2+len);
+			*(dst2 + len) = *(src2 + len);
 		}
 	}
 	else
 	{
 		while (i < len)
 		{
-			*(dst2+i) = *(src2+i);
+			*(dst2 + i) = *(src2 + i);
 			i++;
 		}
 	}

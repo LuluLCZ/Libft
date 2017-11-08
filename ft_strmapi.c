@@ -6,7 +6,7 @@
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 20:23:37 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/07 12:30:11 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:16:59 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char    *ft_strmapi(char const *s, char(*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char        *s2;
-	int         i;
+	char	*s2;
+	int		i;
 
 	i = 0;
 	if (s && f)

@@ -6,7 +6,7 @@
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 00:33:38 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/07 12:29:19 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:14:21 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #include <string.h>
 #include "libft.h"
 
-char    *ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char    *s2;
-	int     i;
+	char	*s2;
+	int		i;
 
 	i = 0;
 	if (s && f)

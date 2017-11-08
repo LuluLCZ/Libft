@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 09:39:19 by Lulu              #+#    #+#             */
-/*   Updated: 2017/11/07 12:59:01 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:13:27 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strncat(char *base, const char *toadd, size_t n)
 		i++;
 		j++;
 		n--;
-	}   
+	}
 	base[i] = '\0';
 	return (base);
 }

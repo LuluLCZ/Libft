@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 08:26:00 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/07 12:33:15 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:12:34 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string.h>
 #include "libft.h"
 
-char    **ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char		**tab;
 	size_t		i;

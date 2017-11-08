@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 16:07:51 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/07 12:23:08 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:18:21 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_putnbr(int nb)
 		}
 		if (nb > 9)
 		{
-			ft_putnbr(nb/10);
+			ft_putnbr(nb / 10);
 		}
 		ft_putchar((nb % 10) + '0');
 	}

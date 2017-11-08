@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 08:12:21 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/07 12:09:55 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:11:21 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 void	*ft_memalloc(size_t size)
 {
-	size_t  i;
-	char    *str;
+	size_t	i;
+	char	*str;
 
 	i = 0;
 	if (!(str = (char *)malloc(sizeof(char) * (size))))

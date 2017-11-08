@@ -6,7 +6,7 @@
 /*   By: llacaze <llacaze@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 23:18:23 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/07 12:36:02 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 16:50:52 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void    ft_swap(void *s1, void *s2)
+void	ft_swap(int *a, int *b)
 {
-	void    tmp;
+	int		tmp;
 
-	tmp = *s1;
-	*s1 = *s2;
-	*s2 = tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

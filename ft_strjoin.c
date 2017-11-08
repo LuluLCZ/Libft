@@ -6,7 +6,7 @@
 /*   By: Lulu <Lulu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 00:19:14 by llacaze           #+#    #+#             */
-/*   Updated: 2017/11/07 13:04:11 by llacaze          ###   ########.fr       */
+/*   Updated: 2017/11/07 14:46:24 by llacaze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string.h>
 #include "libft.h"
 
-static size_t	len(char *str)
+static size_t	len(const char *str)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ static size_t	len(char *str)
 	return (i);
 }
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strjoin(char const *s1, char const *s2)
 {
 	char			*str;
 	int				i;
